@@ -1,5 +1,4 @@
-# Thesis
-# Clinical Data Management Processes and Predictive Machine Learning Models Development for Diagnosis and Rehabilitation in the Cardiovascular Domain
+# Thesis: "Clinical Data Management Processes and Predictive Machine Learning Models Development for Diagnosis and Rehabilitation in the Cardiovascular Domain"
 
 ## Important Info 📝
 This repository contains the LaTeX source files for my Computer Science Thesis, which spans over 100 pages. The research was conducted in collaboration with the multinational company Dedalus, although the source code is not included due to Dedalus' corporate policies.
@@ -16,3 +15,7 @@ Furthermore, Explainable Artificial Intelligence (XAI) has been implemented thro
 
 The results of the study are quite promising: accuracy, precision, and recall, in the two main models, present average values of respectively 95%, 94%, and 95%.
 
+
+## Contact 📇
+
+For questions, please feel free to contact me at gb8gb8**AT**gmail**DOT**com 
