@@ -1,0 +1,239 @@
+% Template Tesi in Informatica, ispirata al template "Tesi di laurea - Università di Pisa" di Simone Schirinzi (https://www.overleaf.com/latex/templates/tesi-di-laurea-universita-di-pisa/rwdcqtqwftpg). 
+
+% Carattere dimensione 12
+\documentclass[12pt]{report}
+
+% Per la stampa fronte-retro sostituire con:
+% \documentclass[12pt, twoside]{report}
+\usepackage{appendix}
+
+% Margini (4cm a sx, 2.5cm a dx, 2.5cm in alto, 2.5cm in basso)
+\usepackage[top=2.5cm, bottom=2.5cm, left=4cm, right=2.5cm, centering]{geometry}
+
+% Per la stampa fronte-retro sostituire con: 
+% \usepackage[top=2.5cm, bottom=2.5cm, inner=4cm, outer=4cm, right=2.5cm, centering]{geometry}
+
+% Interlinea
+\linespread{1.5}
+
+% Librerie utili
+\usepackage[italian]{babel} % applicazione regole di scrittura per la lingua italiana 
+\usepackage[utf8]{inputenc} % codifica UTF-8
+\usepackage{scrlayer-scrpage} % stili pagina per il frontespizio
+\ifoot[]{}
+\cfoot[]{}
+\ofoot[\pagemark]{\pagemark}
+\pagestyle{scrplain}
+\usepackage{} % font Times New Roman (simile)
+\usepackage{graphicx} % inserimento di immagini
+\usepackage{csquotes} % per le citazioni "in blocco"
+%\usepackage[backend=biber, sorting=nty, ]{biblatex} % bibliografia con pacchetto biblatex (https://ctan.org/pkg/biblatex?lang=en)
+\appto{\bibsetup}{\raggedright}
+
+\usepackage{titlesec} % per la formattazione dei titoli delle sezioni, capitoli etc.
+\usepackage{float} % per il posizionamento delle immagini
+
+\usepackage{listings} % per il codice di programmazione
+% Fonte https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings. Per la lista di sintassi riconosciute.
+\renewcommand{\lstlistingname}{Code}% Listing -> Codice
+\usepackage{xcolor}  % stile del codice
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{navy}{HTML}{000080}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Stili configurabili del codice (lslisting) 
+\lstset{ %
+belowcaptionskip=0.5em,
+backgroundcolor=\color{backcolour}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+basicstyle=\footnotesize, % the size of the fonts that are used for the code
+breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+breaklines=true, % sets automatic line breaking
+captionpos=b, % sets the caption-position to bottom
+commentstyle=\color{mygreen}, % comment style
+deletekeywords={...}, % if you want to delete keywords from the given language
+escapeinside={\%*}{*)}, % if you want to add LaTeX within your code
+extendedchars=true, % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+frame=single, % adds a frame around the code
+keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+keywordstyle=\color{codepurple}, % keyword style
+% language=Octave, % the language of the code
+morekeywords={*,...}, % if you want to add more keywords to the set
+numbers=left, % where to put the line-numbers; possible values are (none, left, right)
+numbersep=5pt, % how far the line-numbers are from the code
+numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+rulecolor=\color{black}, % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+showspaces=false, % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+showstringspaces=false, % underline spaces within strings only
+showtabs=false, % show tabs within strings adding particular underscores
+stepnumber=1, % the step between two line-numbers. If it's 1, each line will be numbered
+stringstyle=\color{mymauve}, % string literal style
+tabsize=2, % sets default tabsize to 2 spaces
+title=\lstname % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+% END of listing package 
+
+% Esempio riconoscimento sintassi JavaScript 
+
+\lstdefinelanguage{Python}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, const, let, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{mygreen}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=Python,
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+% Formato delle intestazioni
+\titleformat{\chapter}[block]
+  {\normalfont\LARGE\bfseries}{\thechapter.}{0.5em}{\LARGE}
+\titlespacing*{\chapter}{0pt}{-20pt}{25pt}
+
+\begin{document}
+
+% Frontespizio
+\begin{titlepage}
+\begin{figure}
+    \centering\includegraphics[scale=0.5]{immagini/cherubino_pant541.png}
+\end{figure}
+
+\begin{center}
+    {\LARGE{ Corso di Laurea in Informatica \\}}
+    \vspace{2cm}
+    {\Large { TESI DI LAUREA }}\\
+    \vspace{2cm}
+    {\Large {% Processi di Clinical Data Management e uso di Modelli Predittivi nel Dominio Cardiovascolare }
+    Processi di Clinical Data Management e Creazione di Modelli Predittivi di Machine Learning per Diagnosi e Riabilitazione nel Dominio Cardiovascolare}}
+\end{center}
+
+\vspace{2cm}
+
+\begin{minipage}[t]{0.47\textwidth}
+	{\large{\bf Relatore Accademico:\\ Alina S\^irbu}}
+	\vspace{0.5cm}
+	{\large{\bf \\Relatore Aziendale:\\ Davide Guerri}}
+\end{minipage}\hfill\begin{minipage}[t]{0.47\textwidth}\raggedleft
+	{\large{\bf Candidato: \\ Andrea Carollo\\ }}
+\end{minipage}
+
+\vspace{25mm}
+
+\centering{\large{\bf ANNO ACCADEMICO 2022/2023 }}
+\end{titlepage}
+\begin{flushleft}
+\emph{Sono giunto alla fine di questo intricato percorso, e chi mi conosce sa quanto poco gradisca festeggiarmi. Nonostante dica sempre di essere un ottimo festeggiante ma un pessimo festeggiato ( anche se in totale accordo con questa affermazione) sento il dovere di ringraziare le persone che hanno contribuito in modo significativo al raggiungimento di questo giorno.
+Ringrazio i miei genitori, mio padre Giuseppe e mia madre Cecilia, per essere stati sempre presenti quando ne avevo bisogno e per avermi sostenuto in questi anni. Sono stati i pilastri su cui ho potuto costruire il mio futuro.
+Ringrazio mia sorella Marzia per la comprensione dimostratami, nella speranza di costruire un futuro sereno.
+Ringrazio mio nonno Gaetano per essere da sempre un esempio di "Tenacia" e mia nonna Vincenza per mostrarmi quotidianamente il significato della parola "Gentilezza".
+Ringrazio la mia famiglia, sia stretta che allargata, per l'affetto e la comprensione dimostratomi in questi anni.
+Ringrazio mia zia Cettina, che non può essere qui, ma che porterò sempre nel cuore. Lei mi ha trasmesso l'amore per la scienza, ha piantato il seme della passione per la matematica e la ricerca di una verità oggettiva 25 anni fa. Spero che questo seme, anche in suo onore, presto cominci a dare i suoi frutti.}
+
+\emph{ORA}
+
+\emph{
+Tenendo ben presente quanto possano stufare questa sequela di "Ringrazio", non posso esimermi dal ringraziare anche i miei amici e compagni di percorso. Siete stati la mia fonte primaria di distrazione e oasi di pace.
+Ringrazio quindi i "Secondi Figli", la mia bolla piena di comprensione, accettazione e creatività. 
+Ringrazio i miei compagni di corso e affiliati: Fabio, Federico, Valeria, Brunella, Gabriele.
+Ringrazio Raphael, presenza stoica di questi anni, la persona più vicina a un fratello che possa immaginare, nonostante le differenze.
+Ringrazio Antonio, Chiara e i Carbonari: Guido, Lorenzo, Gabriele e Damiano, per avermi supportato in questi anni, sia con del sano colesterolo che semplicemente essendo presenti.
+Infine, ringrazio la resilienza sviluppata e l'individuo che sono diventato, augurando al me del futuro di superare sfide ben più grandi, con un occhio sempre rivolto al passato.}
+\end{flushleft}
+
+\newpage
+% Fine frontespizio
+
+\tableofcontents
+\thispagestyle{empty}
+
+\listoffigures
+
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\addcontentsline{toc}{chapter}{Introduzione} % Capitolo non numerato
+\section*{Acronimi Utilizzati}
+Nella scrittura della presente tesi sono stati utilizzati i seguenti acronimi, riportati qui per semplificarne la lettura:
+\begin{itemize}
+    \item CVD: Malattie Cardiovascolari
+    \item HDD: Heart Disease Dataset
+    \item PKI: Personal Key Indicator of Heart Disease
+    \item UCI: UCI Heart Disease Dataset
+    \item AI: Artificial Intelligence
+    \item ML: Machine Learning
+    \item EDA: Explorative Data Analisys
+    \item RF: Random Forest
+    \item XGB: Extreme Gradient Boosting
+    \item SVM: Support Vector Machine
+    \item CF: Counterfactual Explanations
+    \item XAI: eXplainable Artificial Intelligence
+    \item USMLE: US Medical License Exam
+    \item DL: Deep Learning
+    \item CV: Computer Vision
+    \item CI: Cardiopatia Ischemica
+\end{itemize}%TODO METTERE IN CIMA
+\input{introduzione.tex}
+
+\clearpage
+
+\input{capitolo1.tex}
+
+\clearpage
+
+\input{capitolo2.tex}
+
+\clearpage
+
+\clearpage
+
+\input{capitolo3.tex}
+
+\clearpage
+
+\clearpage
+
+\input{capitolo4.tex}
+
+\clearpage
+
+
+
+\addcontentsline{toc}{chapter}{Conclusioni} % Capitolo non numerato
+\input{conclusioni.tex}
+
+\appendix
+\input{Appendice1.tex}
+
+
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{bibliography} % Entries are in the refs.bib file
+%\addbibresource{bibliography.bib}
+%\printbibliography
+
+\end{document}

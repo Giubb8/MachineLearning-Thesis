@@ -1,0 +1,91 @@
+\chapter*{Introduzione}
+\label{ch:introduzione}
+\textbf{Contesto:} \newline
+\begin{flushleft}
+    
+Le malattie cardiovascolari (CVD) sono la prima causa di morte a livello globale, con circa 17,9 milioni di vite all'anno, pari al 31\% di tutti i decessi nel mondo. Quattro decessi su 5 per CVD sono dovuti ad attacchi cardiaci e ictus, e un terzo di questi decessi avviene prematuramente in persone di età inferiore ai 70 anni.\cite{whocontesto}
+
+Le persone affette da malattie cardiovascolari o ad alto rischio cardiovascolare (per la presenza di uno o più fattori di rischio come ipertensione, diabete, iperlipidemia o malattie già conclamate) hanno bisogno di una diagnosi e di una gestione precoci.
+Negli ultimi decenni, l'avvento dell' intelligenza artificiale (Artificial Intelligence - AI) ha rivoluzionato numerosi settori, e l'ambito sanitario non fa eccezione.\cite{edoctor}
+L'applicazione delle AI nel mondo dell'healthcare sta apportando notevoli miglioramenti in termini diagnostici, terapeutici e gestionali, offrendo nuove prospettive per il miglioramento della qualità della vita e la salvaguardia della salute delle persone\cite{newenglandjournal}, fornendo quindi un valido supporto nella diagnosi precoce delle patologie, nell'individuazione dei fattori di rischio e nel monitoraggio dei pazienti.
+In questo contesto, il Machine Learning (ML), una sottocategoria dell'AI, gioca un ruolo fondamentale. Il ML si concentra sullo sviluppo di algoritmi e modelli che consentono ai computer di apprendere dai dati per effettuare previsioni, migliorando le loro prestazioni nel tempo senza essere esplicitamente programmati.
+Su tutti questi aspetti si basa il mio lavoro di tesi.
+
+
+\begin{flushleft}
+\textbf{Obiettivi e Collocazione del Progetto:} \newline
+Il Gruppo Dedalus è il principale fornitore di software sanitari e diagnostici in Europa e uno dei maggiori nel mondo con presenza in più di 40 paesi \cite{DedalusDescrizione}.
+L'opportunità di eseguire uno stage al suo interno è stato un eccellente modo di applicare le conoscenze teoriche  acquisite  durante il mio percorso universitario e di svilupparne di nuove nel mondo del machine learning, in un contesto all'avanguardia e internazionale.
+Questa esperienza si è rivelata fondamentale per comprendere le dinamiche lavorative all'interno del settore informatico e per consolidare le mie competenze, oltre ad avermi fornito numerose opportunità di crescita, sia personale che tecnica.
+Il lavoro da me svolto per Dedalus Italia si inserisce nel contesto del progetto REACTS (REspiratory and Cardiac Telerehabilitation integrated home Services) finanziato dalla Provincia Autonoma di Trento, Tuscany Healthcare Ecosystem e  dal Ministero della Ricerca nell’ambito del bando sugli Ecosistemi di Innovazione. 
+Il tirocinio, dal titolo "Processi di Clinical Data Management per Modelli Predittivi nel Dominio Cardiovascolare", aveva come obiettivo  quello di fornire ai professionisti del settore strumenti di supporto decisionale per la  pianificazione dei percorsi di assistenza e cura che riducano il rischio clinico e ottimizzino l’efficacia clinico-assistenziale dei pazienti, con un focus particolare verso i pazienti con patologie e/o a rischio complicazioni cardiovascolari.
+Il risultato del mio lavoro è la creazione di più modelli di AI a partire da tipologie di dati differenti, sia clinici che non.
+Le osservazioni e i risultati ottenuti saranno utilizzati dai centri e ospedali di eccellenza come il Maria Cecilia Hospital e la Casa di Cura Sant'Eremo con l'obiettivo di modificare i piani di esercizio terapia in linea con i risultati ottenuti.
+Poiché siamo in attesa dei dati provenienti dagli ospedali, ho costruito i miei modelli utilizzando dataset pubblici.
+In aggiunta al lavoro sopra citato, è in sviluppo un applicativo desktop per aiutare il team di Dedalus nella scelta consapevole del modello predittivo più adatto. 
+Dato in input un qualsiasi dataset il tool guiderà l'utente in tutte le fasi, dall'analisi e selezione delle features fino alla creazione del modello ( ulteriori dettagli sono disponibili in Appendice ).
+
+
+Le attività principali svolte durante lo stage rientrano in:
+\begin{itemize}
+\item Familiarizzazione con i dati clinici e la loro trattazione
+\item Individuazione dei parametri principali (clinici e non clinici)  per il riconoscimento di una malattia cardiovascolare in corso
+\item Preprocessing dei dati
+\item Scelta, Allenamento , Ottimizzazione dei modelli
+\item Processi di Explainable AI (XAI)
+\item Creazione di un applicativo Desktop per la creazione guidata di modelli prototipo
+\end{itemize}
+
+\textbf{Contributi}
+\begin{itemize}
+\item \textbf{Pipeline di analisi di dati clinici e demografici:}
+    É stata gradualmente sviluppata e utilizzata una pipeline per l'analisi dei dati, il team potrà in futuro appoggiarsi a tale pipeline per svolgere altre analisi.
+
+\item \textbf{ Analisi delle feature più importanti per il problema di classificazione in esame:}
+    Anche in questo caso le analisi effettuate e il procedimento eseguito saranno replicabili in futuro dal team, qualora dovessero intercorrere in simili problemi di classificazione
+    
+\item \textbf{Elenco di dataset pubblici utili e collezione di articoli inerenti:}
+    Ho collezionato una serie di dataset e articoli inerenti al  problema di classificazione in esame, sui dataset sono state effettuate varie analisi che rimarranno al progetto. 
+\item \textbf{Modelli di ML allenati:}
+    Obiettivo dello stage è stata la creazione dei modelli allenati, questi saranno utili al progetto e al suo sviluppo.
+    \item \textbf{Explainable AI:}
+Sono state prodotte della analisi \emph{what-if} che potrebbero essere utilizzate nella clinica dopo adeguata validazione.
+\end{itemize}
+
+\textbf{Competenze acquisite}
+\begin{itemize}
+
+\item \textbf{Trattamento Dati Sanitari:}
+ho avuto modo di gestire dati di tipo clinico, ottenendo un insight medico sugli stessi e imparando l'importanza della privacy nella manipolazione dei dati dei pazienti.
+
+\item \textbf{Esplorazione e valutazione della bontà di un dataset:}
+Ho sviluppato la capacità di esplorare e valutare la qualità di un dataset, comprendendo la sua struttura e apprendendone i difetti.
+\item \textbf{Pipeline di lavoro per la costruzione di un modello di Machine Learning:}
+Ho appreso l'importanza di una pipeline di lavoro strutturata per la costruzione di un modello di ML, comprendendone le diverse fasi, e creandone una mia.
+\item \textbf{Valutazione della letteratura scientifica:}
+Ho sviluppato la capacità di valutare la letteratura scientifica, comprendendo i risultati degli studi e ricerche precedenti per poi integrarli nella progettazione e nella valutazione dei miei modelli 
+\item \textbf{Tecniche di Preprocessing e Postprocessing per un modello di Machine Learning:}
+Ho acquisito competenze nelle tecniche di preprocessing e postprocessing per i modelli di ML
+\item \textbf{Valutazione di vari modelli di Machine Learning:}
+Ho sviluppato la capacità di valutare diversi modelli di machine learning, confrontandone le prestazioni e selezionando quello più adatto al problema in esame.
+\item \textbf{Tecniche di Explainable Artificial Intelligence (XAI):}
+Ho acquisito conoscenze e competenze nelle tecniche di XAI, queste mi hanno permesso di comprendere e interpretare le decisioni dei modelli di ML in modo  più trasparente e interpretabile
+\item \textbf{ Esposizione del proprio lavoro di fronte ad un team tecnico e clinico:}
+Ho avuto modo di presentare e comunicare al team le nuove tecniche o metodologie che ho scoperto e sviluppato durante il mio lavoro, maturando la capacità di esposizione di fronte a un team tecnico e clinico.
+\end{itemize}
+
+\textbf{Struttura della Tesi:}\newline
+\begin{itemize}
+    \item \textbf{ Capitolo 1}: Contestualizzazione dell'uso delle intelligenze artificiali in campo medico e motivazioni che hanno spinto questa tesi
+    \item \textbf{ Capitolo 2:} 
+    Approfondimento sulle tecniche impiegate o approfondite nel corso della ricerca.
+    \item \textbf{Capitolo 3:} 
+    Metodologia di analisi, descrizione dei processi impiegati per ottenere i risultati.
+    \item \textbf{Capitolo 4:} 
+    Presentazione e discussione dei risultati ottenuti.
+    \item \textbf{Appendice A:} Breve Introduzione allo sviluppo del Tool Esplorativo
+\end{itemize}
+
+\end{flushleft}
+
+\end{flushleft}
